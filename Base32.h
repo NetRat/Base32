@@ -15,9 +15,6 @@ class Base32
 {
   public:
     Base32();
-    //String toBase32String(byte*, long);
-    //String toBase32String(byte*, long, boolean);
-
     int toBase32(byte*, long, byte*&);
     int toBase32(byte*, long, byte*&, boolean);
     int fromBase32(byte*, long, byte*&);
