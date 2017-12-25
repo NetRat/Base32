@@ -104,7 +104,7 @@ int Base32::fromBase32(byte* in, long length, byte*& out)
     byte ch = in[i];
 
     // ignoring some characters: ' ', '\t', '\r', '\n', '='
-    if (ch == 0xA0 || ch == 0x09 || ch == 0x0A || ch == 0x0D || ch == 0x3D) continue;
+    if (ch == 0x20 || ch == 0x09 || ch == 0x0A || ch == 0x0D || ch == 0x3D || ch == 0xA0) continue;
 
     // recovering mistyped: '0' -> 'O', '1' -> 'L', '8' -> 'B'
     if (ch == 0x30) { ch = 0x4F; } else if (ch == 0x31) { ch = 0x4C; } else if (ch == 0x38) { ch = 0x42; }
